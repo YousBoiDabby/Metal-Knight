@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://game/level2/platformer/weapons_and_the_chest/chest.gd" type="Script" id=1]
-[ext_resource path="res://game/level2/platformer/weapons_and_the_chest/chest.png" type="Texture" id=2]
+[ext_resource path="res://level2/platformer/weapons_and_the_chest/chest.gd" type="Script" id=1]
+[ext_resource path="res://level2/platformer/weapons_and_the_chest/chest.png" type="Texture" id=2]
 [ext_resource path="res://game/level2/platformer/VT323-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://game/level2/platformer/weapons_and_the_chest/text_bubble.png" type="Texture" id=4]
-[ext_resource path="res://game/level2/platformer/weapons_and_the_chest/chest_ui.png" type="Texture" id=5]
-[ext_resource path="res://game/level2/platformer/weapons_and_the_chest/sword_button.png" type="Texture" id=6]
+[ext_resource path="res://level2/platformer/weapons_and_the_chest/text_bubble.png" type="Texture" id=4]
+[ext_resource path="res://level2/platformer/weapons_and_the_chest/chest_ui.png" type="Texture" id=5]
+[ext_resource path="res://level2/platformer/weapons_and_the_chest/sword_button.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 59.5, 45 )

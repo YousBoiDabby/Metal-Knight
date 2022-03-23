@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cobblestone.png-514aee9d05aabca68faf64974e49259a.stex"
+path="res://.import/cobblestone.png-1cb08a11e95d205f2fb80d3f48e69944.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/level2/platformer/cobblestone.png"
-dest_files=[ "res://.import/cobblestone.png-514aee9d05aabca68faf64974e49259a.stex" ]
+source_file="res://level2/platformer/cobblestone.png"
+dest_files=[ "res://.import/cobblestone.png-1cb08a11e95d205f2fb80d3f48e69944.stex" ]
 
 [params]
 

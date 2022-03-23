@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sword.png-9f0b22212004c1eaf08348e0bea3dd44.stex"
+path="res://.import/sword.png-756d3685a02ff998a779e8491af6587c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/level2/platformer/weapons_and_the_chest/sword.png"
-dest_files=[ "res://.import/sword.png-9f0b22212004c1eaf08348e0bea3dd44.stex" ]
+source_file="res://level2/platformer/weapons_and_the_chest/sword.png"
+dest_files=[ "res://.import/sword.png-756d3685a02ff998a779e8491af6587c.stex" ]
 
 [params]
 

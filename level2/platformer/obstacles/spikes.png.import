@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spikes.png-2fe482c23bbb198937f1fcce7c8c66f8.stex"
+path="res://.import/spikes.png-34cfc133b2323250903d7b3b094f4f97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/level2/platformer/obstacles/spikes.png"
-dest_files=[ "res://.import/spikes.png-2fe482c23bbb198937f1fcce7c8c66f8.stex" ]
+source_file="res://level2/platformer/obstacles/spikes.png"
+dest_files=[ "res://.import/spikes.png-34cfc133b2323250903d7b3b094f4f97.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/text_bubble.png-69866f622710cf2b530db5888eca3fb6.stex"
+path="res://.import/text_bubble.png-6fbf0fe55cc929860d05e5f516e68974.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/level2/platformer/weapons_and_the_chest/text_bubble.png"
-dest_files=[ "res://.import/text_bubble.png-69866f622710cf2b530db5888eca3fb6.stex" ]
+source_file="res://level2/platformer/weapons_and_the_chest/text_bubble.png"
+dest_files=[ "res://.import/text_bubble.png-6fbf0fe55cc929860d05e5f516e68974.stex" ]
 
 [params]
 

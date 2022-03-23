@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mossy_cobblestone.png-ff4292b781c97c7dcc1a8b66cc9cf820.stex"
+path="res://.import/mossy_cobblestone.png-4c27726675ed268545877ca4ee6e122e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/level2/platformer/mossy_cobblestone.png"
-dest_files=[ "res://.import/mossy_cobblestone.png-ff4292b781c97c7dcc1a8b66cc9cf820.stex" ]
+source_file="res://level2/platformer/mossy_cobblestone.png"
+dest_files=[ "res://.import/mossy_cobblestone.png-4c27726675ed268545877ca4ee6e122e.stex" ]
 
 [params]
 

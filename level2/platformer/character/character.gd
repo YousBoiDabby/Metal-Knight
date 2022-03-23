@@ -8,8 +8,6 @@ var MAXFALLSPEED = 200
 var MAXSPEED = 200
 export var attacking = false
 var DASHSPEED = 10000
-var sword_texture = preload("res://game/level2/platformer/character/sword_attacking.png")
-var walking = preload("res://game/level2/platformer/character/metal_knight_walking.png")
 const ACCEL = 20
 var JUMPFORCE = 500
 var dashcount = 1
@@ -94,4 +92,8 @@ func sword():
 	if Input.is_action_pressed("E"):
 		attacking = true
 		$AnimationPlayer.play("attacking_sword")
-		
+	
+func lose_health(health_lost):
+	$HEARTS.losehealth(health_lost)
+	if $HEARTS.health <= 0:
+			pass	

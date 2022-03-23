@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sword_attacking.png-bc687d36207b68ec23a647807b96b738.stex"
+path="res://.import/sword_attacking.png-872db02c3bab78959a3718eb570698ff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/level2/platformer/character/sword_attacking.png"
-dest_files=[ "res://.import/sword_attacking.png-bc687d36207b68ec23a647807b96b738.stex" ]
+source_file="res://level2/platformer/character/sword_attacking.png"
+dest_files=[ "res://.import/sword_attacking.png-872db02c3bab78959a3718eb570698ff.stex" ]
 
 [params]
 

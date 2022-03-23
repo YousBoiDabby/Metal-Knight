@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dirt (2).png-78c60c28f49aa38f2fd2526c2f11a611.stex"
+path="res://.import/dirt (2).png-663c0a8ea018701882cf1e43bf9a8703.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/level2/platformer/dirt (2).png"
-dest_files=[ "res://.import/dirt (2).png-78c60c28f49aa38f2fd2526c2f11a611.stex" ]
+source_file="res://level2/platformer/dirt (2).png"
+dest_files=[ "res://.import/dirt (2).png-663c0a8ea018701882cf1e43bf9a8703.stex" ]
 
 [params]
 

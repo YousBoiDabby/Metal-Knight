@@ -1,24 +1,22 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://game/level2/platformer/character/character.tscn" type="PackedScene" id=1]
-[ext_resource path="res://game/level2/platformer/mine_tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://game/level2/platformer/platforrmer_background.png" type="Texture" id=3]
-[ext_resource path="res://game/level2/platformer/character/hearts.tscn" type="PackedScene" id=4]
-[ext_resource path="res://game/level2/platformer/weapons_and_the_chest/chest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://level2/platformer/character/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://level2/platformer/mine_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://level2/platformer/platforrmer_background.png" type="Texture" id=3]
+[ext_resource path="res://level2/platformer/character/hearts.tscn" type="PackedScene" id=4]
+[ext_resource path="res://level2/platformer/weapons_and_the_chest/chest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://level2/platformer/obstacles/Spikes.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -184.0
-margin_top = -432.0
-margin_right = 2601.0
-margin_bottom = 168.0
+margin_left = -186.0
+margin_top = -438.0
+margin_right = 2599.0
+margin_bottom = 162.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="chest" parent="." instance=ExtResource( 5 )]
 position = Vector2( 368, 136 )
@@ -38,16 +36,20 @@ scale = Vector2( 0.3, 0.3 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 917536, 11, 0, 917537, 11, 0, 1114164, 1073741835, 0, 1114165, 1073741835, 0, 1114166, 1073741835, 0, 1703974, 11, 0, 1703975, 11, 0, 1703976, 11, 0, 2555949, 11, 0, 2555950, 11, 0, 2555951, 11, 0, 3473438, -1610612725, 0, 3538974, -1610612725, 0, 3997753, 11, 0, 3997754, 11, 0, 3997755, 11, 0, 3997756, 11, 0, 3997758, 11, 0 )
+tile_data = PoolIntArray( 262147, 11, 0, 917536, 11, 0, 917537, 11, 0, 1114164, 1073741835, 0, 1114165, 1073741835, 0, 1114166, 1073741835, 0, 1703974, 11, 0, 1703975, 11, 0, 1703976, 11, 0, 2555949, 11, 0, 2555950, 11, 0, 2555951, 11, 0, 3473438, -1610612725, 0, 3538974, -1610612725, 0, 3997753, 11, 0, 3997754, 11, 0, 3997755, 11, 0, 3997756, 11, 0, 3997758, 11, 0 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 16, 16 )
+[node name="Character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 22, 31 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Character"]
 position = Vector2( -3.33337, 0 )
 current = true
 zoom = Vector2( 0.4, 0.4 )
 
-[node name="HEARTS" parent="KinematicBody2D" instance=ExtResource( 4 )]
+[node name="HEARTS" parent="Character" instance=ExtResource( 4 )]
 position = Vector2( -666.667, -373.333 )
+
+[node name="Node2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 61, 138 )
+scale = Vector2( 1.08087, 0.577545 )
