@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Inside_castle/shop/slime.png" type="Texture" id=1]
+[ext_resource path="res://wave/sime tower.gd" type="Script" id=2]
+[ext_resource path="res://wave/Sprite.gd" type="Script" id=3]
+[ext_resource path="res://wave/acid_area.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Acidic_slime" type="Node2D" groups=["no"]]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 53, -19 )
+rotation = -3.14159
+scale = Vector2( 5.89033, 6.07393 )
+texture = ExtResource( 4 )
+script = ExtResource( 3 )
+
+[node name="acidic_slime" type="Sprite" parent="."]
+position = Vector2( 0, -18 )
+scale = Vector2( 0.694606, 0.704097 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Aggro" type="Area2D" parent="acidic_slime"]
+scale = Vector2( 1.59192, 1.84739 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="acidic_slime/Aggro"]
+position = Vector2( 2.71307, 50.7403 )
+scale = Vector2( 12.5099, 8.11534 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="acidic_slime"]
+wait_time = 0.6
+
+[connection signal="SUS" from="acidic_slime" to="Sprite" method="_on_acidic_slime_SUS"]
+[connection signal="area_entered" from="acidic_slime/Aggro" to="acidic_slime" method="_on_Aggro_area_entered"]
+[connection signal="area_exited" from="acidic_slime/Aggro" to="Sprite" method="_on_Aggro_area_exited"]
+[connection signal="area_exited" from="acidic_slime/Aggro" to="acidic_slime" method="_on_Aggro_area_exited"]
+[connection signal="timeout" from="acidic_slime/Timer" to="acidic_slime" method="_on_Timer_timeout"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://wave/inventory/inventory.gd" type="Script" id=3]
+[ext_resource path="res://wave/inventory/INVENTORY_GRID.png" type="Texture" id=10]
+
+[node name="TextureRect" type="TextureRect"]
+margin_left = -18.853
+margin_top = -101.722
+margin_right = 221.147
+margin_bottom = 198.278
+rect_scale = Vector2( 0.35164, 0.705916 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="inventory" type="Control" parent="."]
+margin_left = 338.0
+margin_top = 340.0
+margin_right = 378.0
+margin_bottom = 380.0
+rect_scale = Vector2( 5.51637, 3.2933 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
