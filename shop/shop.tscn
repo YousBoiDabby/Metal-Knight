@@ -1,0 +1,231 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://x.png" type="Texture" id=1]
+[ext_resource path="res://Inside_castle/question_dude_npc/Gugi-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Inside_castle/shop/x.gd" type="Script" id=3]
+[ext_resource path="res://Inside_castle/shop/coins.gd" type="Script" id=4]
+[ext_resource path="res://Inside_castle/shop/shop_tiles.png" type="Texture" id=5]
+[ext_resource path="res://Inside_castle/shop/shop_backgroundpng.png" type="Texture" id=6]
+[ext_resource path="res://Inside_castle/shop/slime.png" type="Texture" id=7]
+[ext_resource path="res://Inside_castle/shop/buy_button.png" type="Texture" id=8]
+[ext_resource path="res://pause/pause_menu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Inside_castle/BebasNeue-Regular.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Inside_castle/shop/buy_button.gd" type="Script" id=11]
+[ext_resource path="res://Inside_castle/shop/amount.gd" type="Script" id=12]
+[ext_resource path="res://Inside_castle/shop/shop.gd" type="Script" id=13]
+[ext_resource path="res://archer.png" type="Texture" id=14]
+[ext_resource path="res://Inside_castle/shop/buy_button_archer.gd" type="Script" id=15]
+[ext_resource path="res://Inside_castle/shop/amount_archer.gd" type="Script" id=16]
+[ext_resource path="res://wave/AudioStreamPlayer.gd" type="Script" id=17]
+[ext_resource path="res://normal.wav" type="AudioStream" id=18]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 10 )
+
+[node name="shop" type="Node2D"]
+position = Vector2( 66, 0 )
+scale = Vector2( 1.19537, 1.1584 )
+script = ExtResource( 13 )
+
+[node name="Shop_background" type="Sprite" parent="."]
+position = Vector2( 374.031, 256.144 )
+scale = Vector2( -1.28848, -1.68168 )
+texture = ExtResource( 6 )
+
+[node name="top_strip" type="Sprite" parent="."]
+position = Vector2( 374.299, 52.0004 )
+rotation = 3.14159
+scale = Vector2( -1.28995, 0.309239 )
+texture = ExtResource( 6 )
+
+[node name="coins" type="Label" parent="top_strip"]
+margin_left = 57.4199
+margin_top = 101.157
+margin_right = 226.42
+margin_bottom = 152.157
+rect_scale = Vector2( 0.67455, -3.75633 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Coins: "
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x" type="TextureButton" parent="."]
+margin_left = 706.894
+margin_top = 0.863261
+margin_right = 781.895
+margin_bottom = 63.8633
+rect_scale = Vector2( 1.30241, 1.32469 )
+texture_normal = ExtResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop tile 1" type="Sprite" parent="."]
+position = Vector2( 89.556, 295.235 )
+rotation = 3.14159
+scale = Vector2( 0.951308, -1.74152 )
+texture = ExtResource( 5 )
+
+[node name="acidic_slime" type="Sprite" parent="shop tile 1"]
+position = Vector2( 73.2564, -33.2511 )
+scale = Vector2( -0.805629, 0.608802 )
+texture = ExtResource( 7 )
+
+[node name="stats" type="Label" parent="shop tile 1"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 7.23969
+margin_top = -87.7381
+margin_right = 1764.24
+margin_bottom = 1289.26
+rect_scale = Vector2( -0.296247, 0.154602 )
+custom_fonts/font = SubResource( 2 )
+text = "Name: Acidic Slime
+Cost: 75 coins
+dmg: 2.5
+attack speed: 0.6
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buy_button" type="TextureButton" parent="shop tile 1"]
+margin_left = 124.927
+margin_top = 70.4942
+margin_right = 358.927
+margin_bottom = 115.494
+rect_scale = Vector2( -1.08916, 0.957721 )
+texture_normal = ExtResource( 8 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="shop tile 1/buy_button"]
+margin_left = 79.6866
+margin_top = 6.59464
+margin_right = 179.687
+margin_bottom = 66.5946
+rect_scale = Vector2( 1.02489, 0.559625 )
+custom_colors/font_color = Color( 0.0235294, 0.552941, 0.0588235, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "BUY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="amount" type="Label" parent="shop tile 1"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 108.21
+margin_top = 7.43546
+margin_right = 668.21
+margin_bottom = 454.435
+rect_scale = Vector2( -0.802881, 0.520081 )
+custom_fonts/font = SubResource( 2 )
+text = "you have: "
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop tile 2" type="Sprite" parent="."]
+position = Vector2( 353.865, 295.235 )
+rotation = 3.14159
+scale = Vector2( 0.951308, -1.74152 )
+texture = ExtResource( 5 )
+
+[node name="swift archer" type="Sprite" parent="shop tile 2"]
+position = Vector2( 61.5566, -27.2633 )
+scale = Vector2( -0.372747, 0.228694 )
+texture = ExtResource( 14 )
+
+[node name="stats" type="Label" parent="shop tile 2"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 7.23969
+margin_top = -87.7381
+margin_right = 1764.24
+margin_bottom = 1289.26
+rect_scale = Vector2( -0.296247, 0.154602 )
+custom_fonts/font = SubResource( 2 )
+text = "Name: Swift Archer
+Cost: 150 coins
+dmg: 5
+attack speed: 0.4
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buy_button" type="TextureButton" parent="shop tile 2"]
+margin_left = 124.927
+margin_top = 70.4942
+margin_right = 358.927
+margin_bottom = 115.494
+rect_scale = Vector2( -1.08916, 0.957721 )
+texture_normal = ExtResource( 8 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="shop tile 2/buy_button"]
+margin_left = 79.6866
+margin_top = 6.59464
+margin_right = 179.687
+margin_bottom = 66.5946
+rect_scale = Vector2( 1.02489, 0.559625 )
+custom_colors/font_color = Color( 0.0235294, 0.552941, 0.0588235, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "BUY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="amount" type="Label" parent="shop tile 2"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 108.21
+margin_top = 7.43546
+margin_right = 668.21
+margin_bottom = 454.435
+rect_scale = Vector2( -0.802881, 0.520081 )
+custom_fonts/font = SubResource( 2 )
+text = "you have: "
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pause" parent="." instance=ExtResource( 9 )]
+visible = false
+margin_left = -54.0
+margin_top = -3.0
+margin_right = -22.0
+margin_bottom = 38.0
+rect_scale = Vector2( 21.3004, 15.2506 )
+
+[node name="shop tile 3" type="Sprite" parent="."]
+position = Vector2( 622.401, 293.508 )
+rotation = 3.14159
+scale = Vector2( 0.951308, -1.74152 )
+texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+autoplay = true
+script = ExtResource( 17 )
+
+[connection signal="pressed" from="x" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="shop tile 1/buy_button" to="shop tile 1/buy_button" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="shop tile 2/buy_button" to="shop tile 2/buy_button" method="_on_buy_button_pressed"]

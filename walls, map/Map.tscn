@@ -1,0 +1,283 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://Inside_castle/Character/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Inside_castle/walls, map/question_dude.gd" type="Script" id=2]
+[ext_resource path="res://Inside_castle/walls, map/shop.png" type="Texture" id=3]
+[ext_resource path="res://Inside_castle/walls, map/barriers.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Inside_castle/walls, map/Shop_dude.gd" type="Script" id=5]
+[ext_resource path="res://Inside_castle/walls, map/Shop.gd" type="Script" id=6]
+[ext_resource path="res://Inside_castle/walls, map/Area2D.gd" type="Script" id=7]
+[ext_resource path="res://Inside_castle/walls, map/pixil-layer-Background.png" type="Texture" id=8]
+[ext_resource path="res://Inside_castle/walls, map/background_flower.png" type="Texture" id=9]
+[ext_resource path="res://Inside_castle/walls, map/gate_keeper.png" type="Texture" id=10]
+[ext_resource path="res://Inside_castle/walls, map/gate_keeper.gd" type="Script" id=11]
+[ext_resource path="res://Inside_castle/walls, map/walk_countdown.gd" type="Script" id=12]
+[ext_resource path="res://Inside_castle/walls, map/no.png" type="Texture" id=13]
+[ext_resource path="res://Inside_castle/walls, map/yes.png" type="Texture" id=14]
+[ext_resource path="res://Inside_castle/walls, map/no.gd" type="Script" id=15]
+[ext_resource path="res://Inside_castle/BebasNeue-Regular.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://Inside_castle/walls, map/yes.gd" type="Script" id=17]
+[ext_resource path="res://Inside_castle/walls, map/Better-Then-Normal_Questioneer.png" type="Texture" id=18]
+[ext_resource path="res://Inside_castle/walls, map/Map.gd" type="Script" id=19]
+[ext_resource path="res://speech_bubble_1.png" type="Texture" id=20]
+[ext_resource path="res://MedievalSharp-Regular.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://Inside_castle/walls, map/timer.gd" type="Script" id=22]
+[ext_resource path="res://Inside_castle/walls, map/text_bubble.gd" type="Script" id=23]
+[ext_resource path="res://Inside_castle/walls, map/Start_wave_text.gd" type="Script" id=24]
+[ext_resource path="res://pause/pause_menu.tscn" type="PackedScene" id=25]
+[ext_resource path="res://wave/AudioStreamPlayer.gd" type="Script" id=26]
+[ext_resource path="res://normal.wav" type="AudioStream" id=27]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2.41986, 7.3833 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1.07922, 3.5902 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 16 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 5.10431, 5.2978 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 0.912623, 32.6079 )
+
+[node name="Inside_castle_map" type="Sprite"]
+position = Vector2( 935, 531 )
+scale = Vector2( 23.431, 13.138 )
+region_rect = Rect2( 244.25, 56.25, 159, 39 )
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 0.153296, 0.273405 )
+scale = Vector2( -0.118411, -0.200092 )
+texture = ExtResource( 9 )
+
+[node name="map" type="Sprite" parent="."]
+position = Vector2( 1.15228, 9.89496 )
+scale = Vector2( 0.0456453, 0.0709161 )
+texture = ExtResource( 8 )
+offset = Vector2( 12.0779, -101.085 )
+
+[node name="Questrion_area" type="Area2D" parent="."]
+position = Vector2( 2.59483, 15.7716 )
+scale = Vector2( 1.0914, 0.763257 )
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Questrion_area"]
+position = Vector2( 20.9678, -17.3727 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Questrion_area"]
+position = Vector2( 16.0406, -13.1842 )
+scale = Vector2( 0.999999, 1 )
+shape = SubResource( 4 )
+
+[node name="question_dude" type="Sprite" parent="."]
+position = Vector2( 20.1013, 5.78479 )
+scale = Vector2( 0.013793, 0.0282284 )
+texture = ExtResource( 18 )
+script = ExtResource( 2 )
+
+[node name="text_bubble" type="TextureRect" parent="question_dude"]
+margin_left = -42.0635
+margin_top = -824.027
+margin_right = 375.937
+margin_bottom = -406.027
+rect_scale = Vector2( 3.31528, 4.4106 )
+texture = ExtResource( 20 )
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="question_dude/text_bubble"]
+margin_left = 113.866
+margin_top = 129.432
+margin_right = 826.866
+margin_bottom = 309.432
+rect_scale = Vector2( 0.479504, 0.291741 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "I have to leave now, 
+but I'll be back when 
+you need me again"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timer" type="Timer" parent="question_dude"]
+script = ExtResource( 22 )
+
+[node name="barriers" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0.810892, 3.50129 )
+scale = Vector2( 1.1342, 1.82332 )
+
+[node name="Shop" type="Area2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shop"]
+position = Vector2( -23.1616, -1.29383 )
+shape = SubResource( 3 )
+
+[node name="Shop_dude" type="Sprite" parent="."]
+position = Vector2( 0, -0.060894 )
+script = ExtResource( 5 )
+
+[node name="actual_shop_dude" type="Sprite" parent="Shop_dude"]
+position = Vector2( -22.7137, -1.22369 )
+rotation = -1.5708
+scale = Vector2( 0.0292697, 0.0189426 )
+texture = ExtResource( 3 )
+
+[node name="gate_keeper" type="Sprite" parent="."]
+position = Vector2( -3.78979, -33.4309 )
+scale = Vector2( 0.015594, 0.0376988 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+
+[node name="walk_countdown" type="Timer" parent="gate_keeper"]
+script = ExtResource( 12 )
+
+[node name="yes" type="TextureButton" parent="gate_keeper"]
+visible = false
+margin_left = 863.615
+margin_top = -124.498
+margin_right = 939.615
+margin_bottom = -98.4983
+rect_scale = Vector2( 4.25477, 3.71268 )
+texture_normal = ExtResource( 14 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="gate_keeper/yes"]
+margin_left = 18.2679
+margin_top = 3.04842
+margin_right = 75.2679
+margin_bottom = 63.0484
+rect_scale = Vector2( 0.63521, 0.326104 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "YES"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no" type="TextureButton" parent="gate_keeper"]
+visible = false
+margin_left = 866.493
+margin_top = -6.79317
+margin_right = 942.493
+margin_bottom = 19.2068
+rect_scale = Vector2( 4.26159, 3.57564 )
+texture_normal = ExtResource( 13 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="gate_keeper/no"]
+margin_left = 21.6164
+margin_top = 5.06441
+margin_right = 78.6164
+margin_bottom = 65.0644
+rect_scale = Vector2( 0.63521, 0.326104 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "NO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text_bubble" type="TextureRect" parent="gate_keeper"]
+visible = false
+margin_left = -43.1831
+margin_top = -325.955
+margin_right = 374.817
+margin_bottom = 92.0448
+rect_scale = Vector2( 2.5554, 1.84379 )
+texture = ExtResource( 20 )
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="gate_keeper/text_bubble"]
+margin_left = 110.718
+margin_top = 124.224
+margin_right = 823.718
+margin_bottom = 304.224
+rect_scale = Vector2( 0.578796, 0.525484 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Do you want 
+to start the wave"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gate" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gate"]
+position = Vector2( 0.682858, -39.8082 )
+shape = SubResource( 5 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0.307129, -16.7459 )
+scale = Vector2( 0.0468456, 0.0441613 )
+
+[node name="pause" parent="KinematicBody2D" instance=ExtResource( 25 )]
+margin_left = -433.836
+margin_top = -541.189
+margin_right = -393.836
+margin_bottom = -501.189
+rect_scale = Vector2( 23.6184, 25.4436 )
+
+[node name="barrier_aroiund castle" type="StaticBody2D" parent="."]
+position = Vector2( 0.284889, -0.724411 )
+rotation = 1.5708
+scale = Vector2( 7.04926, 0.260736 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier_aroiund castle"]
+position = Vector2( 0.502276, -3.98158 )
+rotation = 2.27374e-13
+shape = SubResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
+autoplay = true
+script = ExtResource( 26 )
+
+[connection signal="body_entered" from="Questrion_area" to="question_dude" method="_on_Area2D_body_entered"]
+[connection signal="done1" from="question_dude" to="question_dude/timer" method="_on_question_dude_done1"]
+[connection signal="move_to_me" from="question_dude" to="KinematicBody2D" method="_on_question_dude_move_to_me"]
+[connection signal="text_is_visible" from="question_dude" to="question_dude/text_bubble" method="_on_question_dude_text_is_visible"]
+[connection signal="timeout" from="question_dude/timer" to="question_dude" method="_on_timer_timeout"]
+[connection signal="timeout" from="question_dude/timer" to="question_dude/timer" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Shop" to="Shop_dude" method="_on_Shop_body_entered"]
+[connection signal="show_bubble" from="gate_keeper" to="gate_keeper/text_bubble" method="_on_gate_keeper_show_bubble"]
+[connection signal="show_no" from="gate_keeper" to="gate_keeper/no" method="_on_gate_keeper_show_no"]
+[connection signal="show_yes" from="gate_keeper" to="gate_keeper/yes" method="_on_gate_keeper_show_yes"]
+[connection signal="stop_moving" from="gate_keeper/walk_countdown" to="gate_keeper" method="_on_walk_countdown_stop_moving"]
+[connection signal="hide_bubble" from="gate_keeper/yes" to="gate_keeper/text_bubble" method="_on_yes_hide_bubble"]
+[connection signal="hide_no" from="gate_keeper/yes" to="gate_keeper/no" method="_on_yes_hide_no"]
+[connection signal="pressed" from="gate_keeper/yes" to="gate_keeper/yes" method="_on_yes_pressed"]
+[connection signal="hide_bubble" from="gate_keeper/no" to="gate_keeper/text_bubble" method="_on_no_hide_bubble"]
+[connection signal="hide_yes" from="gate_keeper/no" to="gate_keeper/yes" method="_on_no_hide_yes"]
+[connection signal="pressed" from="gate_keeper/no" to="gate_keeper/no" method="_on_no_pressed"]
+[connection signal="walk" from="gate_keeper/no" to="gate_keeper/walk_countdown" method="_on_no_walk"]
+[connection signal="body_entered" from="gate" to="gate_keeper" method="_on_gate_body_entered"]
