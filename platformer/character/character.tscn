@@ -1,0 +1,291 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://level2/platformer/character.gd" type="Script" id=1]
+[ext_resource path="res://level2/platformer/character/METAL_KINGHT_ANIMATIONS.png" type="Texture" id=2]
+[ext_resource path="res://light.png" type="Texture" id=3]
+[ext_resource path="res://level2/platformer/character/characterdeath.tres" type="Animation" id=4]
+[ext_resource path="res://level2/platformer/character/characterattacking_sword.tres" type="Animation" id=5]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 68.5, 32.5 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 46, 35 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 27.7628, 22.75 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 40, 72.5 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 13 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/mace/mace_box:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/spear/spear_box:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/spear/spear_box:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 128, -25.5 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "mace attack"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0565357, 0.105644, 0.159954, 0.210123, 0.268237, 0.324424, 0.381588, 0.438967, 0.498546, 0.553487, 0.610926, 0.672846, 0.737539, 0.796184, 0.858509 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/mace/mace_box:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, true, true, false, false, false, true, true, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/mace/mace_box:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 131, 7 ), Vector2( 120, 42 ), Vector2( 116, 78 ), Vector2( 131, -17 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "spear attack"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0234226, 0.0469046, 0.0706794, 0.0937765, 0.117196, 0.140616, 0.164068, 0.188166, 0.211908, 0.235617, 0.25836, 0.282392, 0.306779, 0.3312, 0.355133, 0.379423, 0.40252 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/spear/spear_box:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.140264, 0.168046, 0.250713, 0.261555 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/spear/spear_box:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.171434, 0.183631, 0.217511, 0.231063 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 128, -25.5 ), Vector2( 111, -26 ), Vector2( 111, -26 ), Vector2( 111, -26 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "walking"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -8 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/spear/spear_box:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 42, 74.5 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" groups=["character"]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -223.0 ]
+}
+revive = true
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 18
+vframes = 5
+frame = 13
+
+[node name="sword" type="Area2D" parent="Sprite"]
+position = Vector2( -5, 8 )
+
+[node name="sword_box" type="CollisionShape2D" parent="Sprite/sword"]
+position = Vector2( 110.5, 15 )
+shape = SubResource( 8 )
+disabled = true
+
+[node name="mace" type="Area2D" parent="Sprite"]
+
+[node name="mace_box" type="CollisionShape2D" parent="Sprite/mace"]
+position = Vector2( 131, 7 )
+shape = SubResource( 9 )
+
+[node name="spear" type="Area2D" parent="Sprite"]
+
+[node name="spear_box" type="CollisionShape2D" parent="Sprite/spear"]
+position = Vector2( 128, -25.5 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["character"]]
+position = Vector2( -5, 2 )
+shape = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/attacking_sword = ExtResource( 5 )
+anims/death = ExtResource( 4 )
+"anims/mace attack" = SubResource( 6 )
+"anims/spear attack" = SubResource( 11 )
+anims/walking = SubResource( 3 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -2, 7 )
+rotation = -1.5708
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2( -8, 7 )
+rotation = 1.5708
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="DASH" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="hurty_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurty_zone"]
+position = Vector2( -5, 1.5 )
+shape = SubResource( 7 )
+
+[node name="Light2D" type="Light2D" parent="."]
+visible = false
+position = Vector2( -2, -0.999999 )
+scale = Vector2( 1.05269, 0.969205 )
+texture = ExtResource( 3 )
+texture_scale = 0.58
+energy = 0.75
+
+[connection signal="body_entered" from="Sprite/sword" to="." method="_on_sword_body_entered"]
+[connection signal="body_entered" from="Sprite/mace" to="." method="_on_mace_body_entered"]
+[connection signal="body_entered" from="Sprite/spear" to="." method="_on_spear_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="DASH" to="." method="_on_DASH_timeout"]
+[connection signal="body_entered" from="hurty_zone" to="." method="_on_hurty_zone_body_entered"]
