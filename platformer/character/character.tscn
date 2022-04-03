@@ -27,10 +27,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [  ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:frame")
@@ -42,7 +42,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 13 ]
+"values": [ 0 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite/mace/mace_box:disabled")
@@ -120,6 +120,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 131, 7 ), Vector2( 120, 42 ), Vector2( 116, 78 ), Vector2( 131, -17 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:attacking")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.9 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=11]
 resource_name = "spear attack"
@@ -159,6 +171,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 128, -25.5 ), Vector2( 111, -26 ), Vector2( 111, -26 ), Vector2( 111, -26 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:attacking")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -212,10 +236,10 @@ __meta__ = {
 revive = true
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 5, -8 )
 texture = ExtResource( 2 )
 hframes = 18
 vframes = 5
-frame = 13
 
 [node name="sword" type="Area2D" parent="Sprite"]
 position = Vector2( -5, 8 )
@@ -228,7 +252,7 @@ disabled = true
 [node name="mace" type="Area2D" parent="Sprite"]
 
 [node name="mace_box" type="CollisionShape2D" parent="Sprite/mace"]
-position = Vector2( 131, 7 )
+position = Vector2( 131, -17 )
 shape = SubResource( 9 )
 
 [node name="spear" type="Area2D" parent="Sprite"]
@@ -276,7 +300,6 @@ position = Vector2( -5, 1.5 )
 shape = SubResource( 7 )
 
 [node name="Light2D" type="Light2D" parent="."]
-visible = false
 position = Vector2( -2, -0.999999 )
 scale = Vector2( 1.05269, 0.969205 )
 texture = ExtResource( 3 )

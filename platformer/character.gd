@@ -141,7 +141,7 @@ func mace():
 	if Input.is_action_pressed("E"):
 		attacking = true
 		$AnimationPlayer.play("mace attack")
-		var dmg = 6
+		var dmg = 8
 		
 func spear():
 	if Input.is_action_pressed("E"):
