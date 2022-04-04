@@ -1,0 +1,136 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://game/level2/platformer/character/character.gd" type="Script" id=1]
+[ext_resource path="res://game/level2/platformer/character/METAL_KINGHT_ANIMATIONS.png" type="Texture" id=2]
+[ext_resource path="res://game/level2/platformer/characterattacking_sword.tres" type="Animation" id=3]
+[ext_resource path="res://game/level2/platformer/characterdeath.tres" type="Animation" id=4]
+[ext_resource path="res://game/level2/platformer/character/metal_knight_topdown.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 68.5, 32.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 40, 72.5 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "walking"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, -8 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 42, 74.5 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" groups=["character"]]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -223.0 ]
+}
+revive = true
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 18
+vframes = 5
+frame = 1
+
+[node name="sword" type="Area2D" parent="Sprite"]
+position = Vector2( -5, 8 )
+
+[node name="sword_box" type="CollisionShape2D" parent="Sprite/sword"]
+position = Vector2( 110.5, 15 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["character"]]
+position = Vector2( -5, 2 )
+shape = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/attacking_sword = ExtResource( 3 )
+anims/death = ExtResource( 4 )
+anims/walking = SubResource( 3 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -2, 7 )
+rotation = -1.5708
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2( -8, 7 )
+rotation = 1.5708
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="DASH" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="hurty_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurty_zone"]
+position = Vector2( -5, 1.5 )
+shape = SubResource( 7 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -2, -1 )
+texture = ExtResource( 5 )
+
+[connection signal="body_entered" from="Sprite/sword" to="." method="_on_sword_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="DASH" to="." method="_on_DASH_timeout"]
+[connection signal="body_entered" from="hurty_zone" to="." method="_on_hurty_zone_body_entered"]

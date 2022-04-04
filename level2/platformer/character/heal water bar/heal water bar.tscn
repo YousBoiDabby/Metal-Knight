@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/level2/platformer/healing_tonic_bar.png" type="Texture" id=1]
+[ext_resource path="res://game/level2/platformer/character/heal water bar/heal water bar.gd" type="Script" id=2]
+
+[node name="heal water bar" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 6
