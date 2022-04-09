@@ -1,0 +1,1416 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/background_question_wrong.png" type="Texture" id=1]
+[ext_resource path="res://Inside_castle/question_dude_npc/Gugi-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/you_are_correct.gd" type="Script" id=3]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/you_are_very_dumb_and_are incorrect.gd" type="Script" id=4]
+[ext_resource path="res://MedievalSharp-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question2.gd" type="Script" id=6]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/questions.gd" type="Script" id=7]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question3.gd" type="Script" id=8]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question1_background.gd" type="Script" id=9]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question4.gd" type="Script" id=10]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/ORANGE_BUTTON.png" type="Texture" id=11]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/RED_BUTTON.png" type="Texture" id=12]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/blue_button.png" type="Texture" id=13]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/green_button.png" type="Texture" id=14]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question_background.png" type="Texture" id=15]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/bar.png" type="Texture" id=16]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question5.gd" type="Script" id=17]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question6.gd" type="Script" id=18]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question7.gd" type="Script" id=19]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/correct answer screen bg make transparent not 100%.png" type="Texture" id=21]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/continue button.png" type="Texture" id=22]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 5 )
+
+[node name="questions" type="Node2D"]
+position = Vector2( 458, 170 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="question1_background" type="Sprite" parent="."]
+position = Vector2( 59, 120 )
+scale = Vector2( -16.691, 9.34689 )
+script = ExtResource( 9 )
+
+[node name="background" type="Sprite" parent="question1_background"]
+position = Vector2( 0, 0.96283 )
+scale = Vector2( 0.0617825, -0.0629109 )
+texture = ExtResource( 15 )
+
+[node name="Button3_wrong" type="Button" parent="question1_background"]
+margin_left = 28.0
+margin_top = 14.0
+margin_right = 140.0
+margin_bottom = 40.0
+rect_scale = Vector2( -0.239615, 0.380162 )
+text = "U_DUMB"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question1_background/Button3_wrong"]
+position = Vector2( 56.0761, 13.1914 )
+scale = Vector2( 1.84453, -2.29831 )
+texture = ExtResource( 11 )
+
+[node name="question" type="Label" parent="question1_background/Button3_wrong"]
+margin_left = 10.5886
+margin_top = -3.05505
+margin_right = 883.589
+margin_bottom = 317.945
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.211557, 0.215711 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "
+Golgi apparatus
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2_right" type="Button" parent="question1_background"]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 138.0
+margin_bottom = 39.0
+rect_scale = Vector2( -0.187969, 0.306079 )
+text = "RIGHT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question1_background/button2_right"]
+position = Vector2( 70.1761, 18.276 )
+scale = Vector2( 2.5515, 3.58232 )
+texture = ExtResource( 12 )
+
+[node name="question" type="Label" parent="question1_background/button2_right"]
+margin_left = 16.3554
+margin_top = 12.8123
+margin_right = 889.355
+margin_bottom = 333.812
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.251779, 0.368162 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Mitochondria
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button1_wrong" type="Button" parent="question1_background"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 137.0
+margin_bottom = 25.0
+rect_scale = Vector2( -0.245875, 0.462599 )
+text = "WRONG "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question1_background/button1_wrong"]
+position = Vector2( 54.7889, 11.9461 )
+scale = Vector2( 0.793226, 0.719522 )
+texture = ExtResource( 14 )
+
+[node name="question" type="Label" parent="question1_background/button1_wrong"]
+margin_left = 16.1665
+margin_top = 5.23888
+margin_right = 889.167
+margin_bottom = 380.239
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.214228, 0.272912 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Vacuole
+    
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button4_wrong" type="Button" parent="question1_background"]
+margin_left = -1.0
+margin_top = 14.0
+margin_right = 141.0
+margin_bottom = 42.0
+rect_rotation = -0.358019
+rect_scale = Vector2( -0.184704, 0.366018 )
+text = "WRONG"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question1_background/button4_wrong"]
+position = Vector2( 70.6648, 13.5483 )
+scale = Vector2( 0.812505, 0.843857 )
+texture = ExtResource( 13 )
+
+[node name="question" type="Label" parent="question1_background/button4_wrong"]
+margin_left = 28.0956
+margin_top = 7.84503
+margin_right = 901.096
+margin_bottom = 328.845
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.211557, 0.215711 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "lysosomes
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Sprite" parent="question1_background"]
+position = Vector2( -0.0533759, -23.7395 )
+scale = Vector2( 0.154684, 0.239553 )
+texture = ExtResource( 16 )
+
+[node name="question" type="Label" parent="question1_background/bar"]
+margin_left = 183.923
+margin_top = -15.696
+margin_right = 1056.92
+margin_bottom = 89.304
+rect_rotation = 0.0539488
+rect_scale = Vector2( -0.411882, 0.59131 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "What is the powerhouse of the cell?
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question2" type="Sprite" parent="."]
+position = Vector2( 59, 133 )
+scale = Vector2( -16.691, 9.34689 )
+script = ExtResource( 6 )
+
+[node name="background" type="Sprite" parent="question2"]
+position = Vector2( 0, 0.96283 )
+scale = Vector2( 0.0617825, -0.0629109 )
+texture = ExtResource( 15 )
+
+[node name="Button3_right2" type="Button" parent="question2"]
+margin_left = 27.8756
+margin_top = 13.9219
+margin_right = 139.876
+margin_bottom = 41.9219
+rect_scale = Vector2( -0.239615, 0.380162 )
+text = "right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="question2/Button3_right2"]
+position = Vector2( 56.5762, 14.0227 )
+scale = Vector2( 1.86093, -2.44119 )
+texture = ExtResource( 11 )
+
+[node name="question" type="Label" parent="question2/Button3_right2"]
+margin_left = 8.06882
+margin_top = 3.3421
+margin_right = 881.069
+margin_bottom = 432.342
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.211561, 0.227911 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "To get rid of waste 
+inside the cell
+
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2_wrong2" type="Button" parent="question2"]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 138.0
+margin_bottom = 39.0
+rect_scale = Vector2( -0.187969, 0.306079 )
+text = "SUPICIOUS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question2/button2_wrong2"]
+position = Vector2( 70.1761, 18.276 )
+scale = Vector2( 2.5515, 3.58232 )
+texture = ExtResource( 12 )
+
+[node name="question" type="Label" parent="question2/button2_wrong2"]
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 877.0
+margin_bottom = 270.0
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.228867, 0.330835 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "To hold in the cytoplasm
+ and organelles
+
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button1_wrong2" type="Button" parent="question2"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 137.0
+margin_bottom = 25.0
+rect_scale = Vector2( -0.245875, 0.462599 )
+text = "WRONG "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question2/button1_wrong2"]
+position = Vector2( 54.7889, 11.9461 )
+scale = Vector2( 0.793226, 0.719522 )
+texture = ExtResource( 14 )
+
+[node name="question" type="Label" parent="question2/button1_wrong2"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "To produce proteins
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button4_wrong2" type="Button" parent="question2"]
+margin_left = -1.14424
+margin_top = 13.6956
+margin_right = 140.856
+margin_bottom = 41.6956
+rect_rotation = -0.358019
+rect_scale = Vector2( -0.184704, 0.366018 )
+text = "U_KINDA_SMART"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question2/button4_wrong2"]
+position = Vector2( 70.6648, 13.5483 )
+scale = Vector2( 0.812505, 0.843857 )
+texture = ExtResource( 13 )
+
+[node name="question" type="Label" parent="question2/button4_wrong2"]
+margin_left = 9.73224
+margin_top = 2.59674
+margin_right = 882.732
+margin_bottom = 431.597
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.211557, 0.215711 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "To hold in the cytoplasm
+ and organelles
+
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Sprite" parent="question2"]
+position = Vector2( -0.0533759, -23.7395 )
+scale = Vector2( 0.154684, 0.239553 )
+texture = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="question2/bar"]
+margin_left = 195.17
+margin_top = -20.5473
+margin_right = 856.169
+margin_bottom = 30.4527
+rect_rotation = 0.0539488
+rect_scale = Vector2( -0.411882, 0.59131 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "What is the function of the vacuole?
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question3" type="Sprite" parent="."]
+position = Vector2( 59, 133 )
+scale = Vector2( -16.691, 9.34689 )
+script = ExtResource( 8 )
+
+[node name="background" type="Sprite" parent="question3"]
+position = Vector2( 0, 0.96283 )
+scale = Vector2( 0.0617825, -0.0629109 )
+texture = ExtResource( 15 )
+
+[node name="Button3_wrong3" type="Button" parent="question3"]
+margin_left = 28.0
+margin_top = 14.0
+margin_right = 140.0
+margin_bottom = 42.0
+rect_scale = Vector2( -0.239615, 0.380162 )
+text = "YOU_LOVED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question3/Button3_wrong3"]
+position = Vector2( 56.0761, 13.1914 )
+scale = Vector2( 1.84453, -2.29831 )
+texture = ExtResource( 11 )
+
+[node name="question" type="Label" parent="question3/Button3_wrong3"]
+margin_left = 8.83884
+margin_top = 8.20215
+margin_right = 881.839
+margin_bottom = 329.202
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Dont Know Anything
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2_wrong3" type="Button" parent="question3"]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 138.0
+margin_bottom = 39.0
+rect_scale = Vector2( -0.187969, 0.306079 )
+text = "SUPICIOUS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question3/button2_wrong3"]
+position = Vector2( 70.1761, 18.276 )
+scale = Vector2( 2.5515, 3.58232 )
+texture = ExtResource( 12 )
+
+[node name="question" type="Label" parent="question3/button2_wrong3"]
+margin_left = 5.83496
+margin_top = 8.26717
+margin_right = 878.835
+margin_bottom = 383.267
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.168637, 0.408248 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Deteriorating Non-toxic Antidote
+
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button1_wrong3" type="Button" parent="question3"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 137.0
+margin_bottom = 25.0
+rect_scale = Vector2( -0.245875, 0.462599 )
+text = "YOU_SMART???"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question3/button1_wrong3"]
+position = Vector2( 54.7889, 11.9461 )
+scale = Vector2( 0.793226, 0.719522 )
+texture = ExtResource( 14 )
+
+[node name="question" type="Label" parent="question3/button1_wrong3"]
+margin_left = 10.3189
+margin_top = 5.23889
+margin_right = 883.319
+margin_bottom = 326.239
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Ribonucleic acid
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button4_right3" type="Button" parent="question3"]
+margin_left = -1.14424
+margin_top = 13.6956
+margin_right = 140.856
+margin_bottom = 41.6956
+rect_rotation = -0.358019
+rect_scale = Vector2( -0.184704, 0.366018 )
+text = "UWU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question3/button4_right3"]
+position = Vector2( 70.6648, 13.5483 )
+scale = Vector2( 0.812505, 0.843857 )
+texture = ExtResource( 13 )
+
+[node name="question" type="Label" parent="question3/button4_right3"]
+margin_left = 16.9564
+margin_top = 8.42899
+margin_right = 889.956
+margin_bottom = 329.429
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Deoxyribonucleic acid"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Sprite" parent="question3"]
+position = Vector2( -0.0533759, -23.7395 )
+scale = Vector2( 0.154684, 0.239553 )
+texture = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="question3/bar"]
+margin_left = 139.769
+margin_top = -10.7676
+margin_right = 800.768
+margin_bottom = 310.232
+rect_rotation = 0.0539488
+rect_scale = Vector2( -0.411882, 0.59131 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "What does DNA stand for?
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question4" type="Sprite" parent="."]
+position = Vector2( 59, 133 )
+scale = Vector2( -16.691, 9.34689 )
+script = ExtResource( 10 )
+
+[node name="background" type="Sprite" parent="question4"]
+position = Vector2( 0, 0.96283 )
+scale = Vector2( 0.0617825, -0.0629109 )
+texture = ExtResource( 15 )
+
+[node name="Button3_right4" type="Button" parent="question4"]
+margin_left = 28.0
+margin_top = 14.0
+margin_right = 141.0
+margin_bottom = 42.0
+rect_scale = Vector2( -0.239615, 0.380162 )
+text = "YOU_LOVED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question4/Button3_right4"]
+position = Vector2( 56.0761, 13.1914 )
+scale = Vector2( 1.84453, -2.29831 )
+texture = ExtResource( 11 )
+
+[node name="question" type="Label" parent="question4/Button3_right4"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "In the nucleus
+
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2_wrong4" type="Button" parent="question4"]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 138.0
+margin_bottom = 39.0
+rect_scale = Vector2( -0.187969, 0.306079 )
+text = "SUPICIOUS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question4/button2_wrong4"]
+position = Vector2( 70.1761, 18.276 )
+scale = Vector2( 2.5515, 3.58232 )
+texture = ExtResource( 12 )
+
+[node name="question" type="Label" parent="question4/button2_wrong4"]
+margin_left = 12.8486
+margin_top = 9.31688
+margin_right = 885.849
+margin_bottom = 330.317
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.242975, 0.362799 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "In the mitochondria
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button1_wrong4" type="Button" parent="question4"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 137.0
+margin_bottom = 25.0
+rect_scale = Vector2( -0.245875, 0.462599 )
+text = "YOU_SMART???"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question4/button1_wrong4"]
+position = Vector2( 54.7889, 11.9461 )
+scale = Vector2( 0.793226, 0.719522 )
+texture = ExtResource( 14 )
+
+[node name="question" type="Label" parent="question4/button1_wrong4"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "In the cytoplasm
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button4_wrong4" type="Button" parent="question4"]
+margin_left = -1.14424
+margin_top = 13.6956
+margin_right = 140.856
+margin_bottom = 41.6956
+rect_rotation = -0.358019
+rect_scale = Vector2( -0.184704, 0.366018 )
+text = "UWU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question4/button4_wrong4"]
+position = Vector2( 70.6648, 13.5483 )
+scale = Vector2( 0.812505, 0.843857 )
+texture = ExtResource( 13 )
+
+[node name="question" type="Label" parent="question4/button4_wrong4"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "In the lysosomes
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Sprite" parent="question4"]
+position = Vector2( -0.0533759, -23.7395 )
+scale = Vector2( 0.154684, 0.239553 )
+texture = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="question4/bar"]
+margin_left = 128.524
+margin_top = -10.8617
+margin_right = 789.523
+margin_bottom = 148.138
+rect_rotation = 0.0539488
+rect_scale = Vector2( -0.411882, 0.59131 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Where is DNA stored?
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question5" type="Sprite" parent="."]
+position = Vector2( 59, 133 )
+scale = Vector2( -16.691, 9.34689 )
+script = ExtResource( 17 )
+
+[node name="background" type="Sprite" parent="question5"]
+position = Vector2( 0, 0.96283 )
+scale = Vector2( 0.0617825, -0.0629109 )
+texture = ExtResource( 15 )
+
+[node name="Button3_wrong5" type="Button" parent="question5"]
+margin_left = 28.0
+margin_top = 14.0
+margin_right = 141.0
+margin_bottom = 42.0
+rect_scale = Vector2( -0.239615, 0.380162 )
+text = "YOU_LOVED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question5/Button3_wrong5"]
+position = Vector2( 56.0761, 13.1914 )
+scale = Vector2( 1.84453, -2.29831 )
+texture = ExtResource( 11 )
+
+[node name="question" type="Label" parent="question5/Button3_wrong5"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "a chair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2_wrong5" type="Button" parent="question5"]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 138.0
+margin_bottom = 39.0
+rect_scale = Vector2( -0.187969, 0.306079 )
+text = "SUPICIOUS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question5/button2_wrong5"]
+position = Vector2( 70.1761, 18.276 )
+scale = Vector2( 2.5515, 3.58232 )
+texture = ExtResource( 12 )
+
+[node name="question" type="Label" parent="question5/button2_wrong5"]
+margin_left = 26.2355
+margin_top = 9.66733
+margin_right = 899.236
+margin_bottom = 330.667
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.302726, 0.428904 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "An organ
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button1_wrong5" type="Button" parent="question5"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 137.0
+margin_bottom = 25.0
+rect_scale = Vector2( -0.245875, 0.462599 )
+text = "YOU_SMART???"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question5/button1_wrong5"]
+position = Vector2( 54.7889, 11.9461 )
+scale = Vector2( 0.793226, 0.719522 )
+texture = ExtResource( 14 )
+
+[node name="question" type="Label" parent="question5/button1_wrong5"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "An organelle
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button4_right5" type="Button" parent="question5"]
+margin_left = -1.14424
+margin_top = 13.6956
+margin_right = 140.856
+margin_bottom = 41.6956
+rect_rotation = -0.358019
+rect_scale = Vector2( -0.184704, 0.366018 )
+text = "UWU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question5/button4_right5"]
+position = Vector2( 70.6648, 13.5483 )
+scale = Vector2( 0.812505, 0.843857 )
+texture = ExtResource( 13 )
+
+[node name="question" type="Label" parent="question5/button4_right5"]
+margin_left = 27.2859
+margin_top = 5.47272
+margin_right = 900.286
+margin_bottom = 326.473
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.240038, 0.291468 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "A tissue    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Sprite" parent="question5"]
+position = Vector2( -0.0533759, -23.7395 )
+scale = Vector2( 0.154684, 0.239553 )
+texture = ExtResource( 16 )
+
+[node name="question" type="Label" parent="question5/bar"]
+margin_left = 195.17
+margin_top = -20.5473
+margin_right = 856.169
+margin_bottom = 30.4527
+rect_rotation = 0.0539488
+rect_scale = Vector2( -0.332064, 0.715306 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Cells that have grouped together become what?
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question6" type="Sprite" parent="."]
+position = Vector2( 59, 133 )
+scale = Vector2( -16.691, 9.34689 )
+script = ExtResource( 18 )
+
+[node name="background" type="Sprite" parent="question6"]
+position = Vector2( 0, 0.96283 )
+scale = Vector2( 0.0617825, -0.0629109 )
+texture = ExtResource( 15 )
+
+[node name="Button3_wrong6" type="Button" parent="question6"]
+margin_left = 28.0
+margin_top = 14.0
+margin_right = 141.0
+margin_bottom = 42.0
+rect_scale = Vector2( -0.239615, 0.380162 )
+text = "YOU_LOVED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question6/Button3_wrong6"]
+position = Vector2( 56.0761, 13.1914 )
+scale = Vector2( 1.84453, -2.29831 )
+texture = ExtResource( 11 )
+
+[node name="question" type="Label" parent="question6/Button3_wrong6"]
+margin_left = 29.0917
+margin_top = 7.64108
+margin_right = 902.092
+margin_bottom = 328.641
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "A cell
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2_wrong6" type="Button" parent="question6"]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 138.0
+margin_bottom = 39.0
+rect_scale = Vector2( -0.187969, 0.306079 )
+text = "SUPICIOUS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question6/button2_wrong6"]
+position = Vector2( 70.1761, 18.276 )
+scale = Vector2( 2.5515, 3.58232 )
+texture = ExtResource( 12 )
+
+[node name="question" type="Label" parent="question6/button2_wrong6"]
+margin_left = 9.02368
+margin_top = 8.61755
+margin_right = 882.024
+margin_bottom = 329.618
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.238105, 0.386768 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "The Golgi apparatus
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button1_right6" type="Button" parent="question6"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 137.0
+margin_bottom = 25.0
+rect_scale = Vector2( -0.245875, 0.462599 )
+text = "YOU_SMART???"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question6/button1_right6"]
+position = Vector2( 54.7889, 11.9461 )
+scale = Vector2( 0.793226, 0.719522 )
+texture = ExtResource( 14 )
+
+[node name="question" type="Label" parent="question6/button1_right6"]
+margin_left = 4.47099
+margin_top = 2.6951
+margin_right = 877.471
+margin_bottom = 377.695
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.115507, 0.173615 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "A group of organs that work
+together to keep an organism alive
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button4_wrong6" type="Button" parent="question6"]
+margin_left = -1.14424
+margin_top = 13.6956
+margin_right = 140.856
+margin_bottom = 41.6956
+rect_rotation = -0.358019
+rect_scale = Vector2( -0.184704, 0.366018 )
+text = "UWU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question6/button4_wrong6"]
+position = Vector2( 70.6648, 13.5483 )
+scale = Vector2( 0.812505, 0.843857 )
+texture = ExtResource( 13 )
+
+[node name="question" type="Label" parent="question6/button4_wrong6"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "A system of organs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Sprite" parent="question6"]
+position = Vector2( -0.0533759, -23.7395 )
+scale = Vector2( 0.154684, 0.239553 )
+texture = ExtResource( 16 )
+
+[node name="question" type="Label" parent="question6/bar"]
+margin_left = 195.17
+margin_top = -20.5473
+margin_right = 856.169
+margin_bottom = 30.4527
+rect_rotation = 0.0539488
+rect_scale = Vector2( -0.411882, 0.59131 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "What is an organ system?
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question7" type="Sprite" parent="."]
+position = Vector2( 59, 133 )
+scale = Vector2( -16.691, 9.34689 )
+script = ExtResource( 19 )
+
+[node name="background" type="Sprite" parent="question7"]
+position = Vector2( 0, 0.96283 )
+scale = Vector2( 0.0617825, -0.0629109 )
+texture = ExtResource( 15 )
+
+[node name="Button3_right7" type="Button" parent="question7"]
+margin_left = 28.0
+margin_top = 14.0
+margin_right = 141.0
+margin_bottom = 42.0
+rect_scale = Vector2( -0.239615, 0.380162 )
+text = "YOU_LOVED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question7/Button3_right7"]
+position = Vector2( 56.0761, 13.1914 )
+scale = Vector2( 1.84453, -2.29831 )
+texture = ExtResource( 11 )
+
+[node name="question" type="Label" parent="question7/Button3_right7"]
+margin_left = 4.0873
+margin_top = 2.01038
+margin_right = 877.087
+margin_bottom = 431.01
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.128825, 0.156565 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "To move oxygen around the body
+through the use of veins, arteries,
+capillaries
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button2_wrong7" type="Button" parent="question7"]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 138.0
+margin_bottom = 39.0
+rect_scale = Vector2( -0.187969, 0.306079 )
+text = "SUPICIOUS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question7/button2_wrong7"]
+position = Vector2( 70.1761, 18.276 )
+scale = Vector2( 2.5515, 3.58232 )
+texture = ExtResource( 12 )
+
+[node name="question" type="Label" parent="question7/button2_wrong7"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.193469, 0.257302 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "To help you breathe
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button1_wrong7" type="Button" parent="question7"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 137.0
+margin_bottom = 25.0
+rect_scale = Vector2( -0.245875, 0.462599 )
+text = "YOU_SMART???"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question7/button1_wrong7"]
+position = Vector2( 54.7889, 11.9461 )
+scale = Vector2( 0.793226, 0.719522 )
+texture = ExtResource( 14 )
+
+[node name="question" type="Label" parent="question7/button1_wrong7"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.178542, 0.258092 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "To move your muscles
+
+
+    
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button4_wrong7" type="Button" parent="question7"]
+margin_left = -1.14424
+margin_top = 13.6956
+margin_right = 140.856
+margin_bottom = 41.6956
+rect_rotation = -0.358019
+rect_scale = Vector2( -0.184704, 0.366018 )
+text = "UWU"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="question7/button4_wrong7"]
+position = Vector2( 70.6648, 13.5483 )
+scale = Vector2( 0.812505, 0.843857 )
+texture = ExtResource( 13 )
+
+[node name="question" type="Label" parent="question7/button4_wrong7"]
+margin_left = 4.47092
+margin_top = 4.3139
+margin_right = 877.471
+margin_bottom = 325.314
+rect_rotation = 0.0539488
+rect_scale = Vector2( 0.16634, 0.206929 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "To digest your food and give you
+ nutrients
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bar" type="Sprite" parent="question7"]
+position = Vector2( -0.0533759, -23.7395 )
+scale = Vector2( 0.154684, 0.239553 )
+texture = ExtResource( 16 )
+
+[node name="question" type="Label" parent="question7/bar"]
+margin_left = 195.17
+margin_top = -20.5473
+margin_right = 856.169
+margin_bottom = 30.4527
+rect_rotation = 0.0539488
+rect_scale = Vector2( -0.342391, 0.628275 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "What is the function of the circulatory system?
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="you_are_correct" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.921569 )
+position = Vector2( 57.7348, 133 )
+rotation = 3.14159
+scale = Vector2( 10.3088, -6.12087 )
+texture = ExtResource( 21 )
+script = ExtResource( 3 )
+
+[node name="button to continue2" type="TextureButton" parent="you_are_correct"]
+margin_left = -20.6878
+margin_top = -15.5206
+margin_right = 79.3122
+margin_bottom = 84.4794
+rect_scale = Vector2( 0.571697, 0.853279 )
+texture_normal = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="you_are_correct/button to continue2"]
+margin_left = 57.6388
+margin_top = 35.2327
+margin_right = 263.639
+margin_bottom = 93.2327
+rect_scale = Vector2( -0.181708, 0.180695 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="you_are_correct"]
+margin_left = 15.5919
+margin_top = -8.98578
+margin_right = 262.592
+margin_bottom = 49.0142
+rect_scale = Vector2( -0.118282, 0.21387 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "+ 50 Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="you_are_correct"]
+margin_left = 28.5907
+margin_top = -41.0073
+margin_right = 275.591
+margin_bottom = 16.9927
+rect_scale = Vector2( -0.298155, 0.489407 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Correct"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="you_are_very_dumb_and_are incorrect" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.921569 )
+position = Vector2( 68, 133 )
+scale = Vector2( 3.48261, 2.03196 )
+texture = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="button to continue" type="TextureButton" parent="you_are_very_dumb_and_are incorrect"]
+margin_left = 58.5767
+margin_top = -36.9102
+margin_right = 158.577
+margin_bottom = 63.0898
+rect_scale = Vector2( -1.71905, 2.28289 )
+texture_normal = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="you_are_very_dumb_and_are incorrect/button to continue"]
+margin_left = 57.6388
+margin_top = 35.2327
+margin_right = 263.639
+margin_bottom = 93.2327
+rect_scale = Vector2( -0.181708, 0.180695 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="you_are_very_dumb_and_are incorrect"]
+margin_left = -41.0611
+margin_top = -30.5124
+margin_right = 205.939
+margin_bottom = 27.4876
+rect_scale = Vector2( 0.280874, 0.963935 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "+ 0 Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="you_are_very_dumb_and_are incorrect"]
+margin_left = -79.8252
+margin_top = -123.034
+margin_right = 167.175
+margin_bottom = -65.0339
+rect_scale = Vector2( 0.675765, 1.52419 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Incorrect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="hide_1" from="." to="question1_background" method="_on_questions_hide_1"]
+[connection signal="hide_2" from="." to="question2" method="_on_questions_hide_2"]
+[connection signal="hide_3" from="." to="question3" method="_on_questions_hide_3"]
+[connection signal="hide_4" from="." to="question4" method="_on_questions_hide_4"]
+[connection signal="hide_5" from="." to="question5" method="_on_questions_hide_5"]
+[connection signal="hide_6" from="." to="question6" method="_on_questions_hide_6"]
+[connection signal="hide_7" from="." to="question7" method="_on_questions_hide_7"]
+[connection signal="hide_correct" from="." to="you_are_correct" method="_on_questions_hide_correct"]
+[connection signal="hide_wrong" from="." to="you_are_very_dumb_and_are incorrect" method="_on_questions_hide_wrong"]
+[connection signal="question_is_2" from="." to="question2" method="_on_questions_question_is_2"]
+[connection signal="question_is_3" from="." to="question3" method="_on_questions_question_is_3"]
+[connection signal="question_is_4" from="." to="question4" method="_on_questions_question_is_4"]
+[connection signal="question_is_5" from="." to="question5" method="_on_questions_question_is_5"]
+[connection signal="question_is_6" from="." to="question6" method="_on_questions_question_is_6"]
+[connection signal="question_is_7" from="." to="question7" method="_on_questions_question_is_7"]
+[connection signal="pressed" from="question1_background/Button3_wrong" to="you_are_very_dumb_and_are incorrect" method="_on_Button3_wrong_pressed"]
+[connection signal="pressed" from="question1_background/button2_right" to="you_are_correct" method="_on_button2_right_pressed"]
+[connection signal="pressed" from="question1_background/button1_wrong" to="you_are_very_dumb_and_are incorrect" method="_on_button1_wrong_pressed"]
+[connection signal="pressed" from="question1_background/button4_wrong" to="you_are_very_dumb_and_are incorrect" method="_on_button4_wrong_pressed"]
+[connection signal="pressed" from="question2/Button3_right2" to="you_are_correct" method="_on_Button3_right2_pressed"]
+[connection signal="pressed" from="question2/button2_wrong2" to="you_are_very_dumb_and_are incorrect" method="_on_button2_wrong2_pressed"]
+[connection signal="pressed" from="question2/button1_wrong2" to="you_are_very_dumb_and_are incorrect" method="_on_button1_wrong2_pressed"]
+[connection signal="pressed" from="question2/button4_wrong2" to="you_are_very_dumb_and_are incorrect" method="_on_button4_wrong2_pressed"]
+[connection signal="pressed" from="question3/Button3_wrong3" to="you_are_very_dumb_and_are incorrect" method="_on_Button3_wrong3_pressed"]
+[connection signal="pressed" from="question3/button2_wrong3" to="you_are_very_dumb_and_are incorrect" method="_on_button2_wrong3_pressed"]
+[connection signal="pressed" from="question3/button1_wrong3" to="you_are_very_dumb_and_are incorrect" method="_on_button1_wrong3_pressed"]
+[connection signal="pressed" from="question3/button4_right3" to="you_are_correct" method="_on_button4_right3_pressed"]
+[connection signal="pressed" from="question4/Button3_right4" to="you_are_correct" method="_on_Button3_right4_pressed"]
+[connection signal="pressed" from="question4/button2_wrong4" to="you_are_very_dumb_and_are incorrect" method="_on_button2_wrong4_pressed"]
+[connection signal="pressed" from="question4/button1_wrong4" to="you_are_very_dumb_and_are incorrect" method="_on_button1_wrong4_pressed"]
+[connection signal="pressed" from="question4/button4_wrong4" to="you_are_very_dumb_and_are incorrect" method="_on_button4_wrong4_pressed"]
+[connection signal="pressed" from="question5/Button3_wrong5" to="you_are_very_dumb_and_are incorrect" method="_on_Button3_wrong5_pressed"]
+[connection signal="pressed" from="question5/button2_wrong5" to="you_are_very_dumb_and_are incorrect" method="_on_button2_wrong5_pressed"]
+[connection signal="pressed" from="question5/button1_wrong5" to="you_are_very_dumb_and_are incorrect" method="_on_button1_wrong5_pressed"]
+[connection signal="pressed" from="question5/button4_right5" to="you_are_correct" method="_on_button4_right5_pressed"]
+[connection signal="pressed" from="question6/Button3_wrong6" to="you_are_very_dumb_and_are incorrect" method="_on_Button3_wrong6_pressed"]
+[connection signal="pressed" from="question6/button2_wrong6" to="you_are_very_dumb_and_are incorrect" method="_on_button2_wrong6_pressed"]
+[connection signal="pressed" from="question6/button1_right6" to="you_are_correct" method="_on_button1_right6_pressed"]
+[connection signal="pressed" from="question6/button4_wrong6" to="you_are_very_dumb_and_are incorrect" method="_on_button4_wrong6_pressed"]
+[connection signal="pressed" from="question7/Button3_right7" to="you_are_correct" method="_on_Button3_right7_pressed"]
+[connection signal="pressed" from="question7/button2_wrong7" to="you_are_very_dumb_and_are incorrect" method="_on_button2_wrong7_pressed"]
+[connection signal="pressed" from="question7/button1_wrong7" to="you_are_very_dumb_and_are incorrect" method="_on_button1_wrong7_pressed"]
+[connection signal="pressed" from="question7/button4_wrong7" to="you_are_very_dumb_and_are incorrect" method="_on_button4_wrong7_pressed"]
+[connection signal="hide_question" from="you_are_correct" to="." method="_on_you_are_correct_hide_question"]
+[connection signal="pressed" from="you_are_correct/button to continue2" to="." method="_on_button_to_continue2_pressed"]
+[connection signal="hide_question" from="you_are_very_dumb_and_are incorrect" to="." method="_on_you_are_very_dumb_and_are_incorrect_hide_question"]
+[connection signal="pressed" from="you_are_very_dumb_and_are incorrect/button to continue" to="." method="_on_button_to_continue_pressed"]

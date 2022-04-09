@@ -1,0 +1,151 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Inside_castle/question_dude_npc/Gugi-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/questions.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Inside_castle/question_dude_npc/question_dude_ui/Label.gd" type="Script" id=4]
+[ext_resource path="res://Inside_castle/question_dude_npc/question_dude_ui/start questions button.png" type="Texture" id=5]
+[ext_resource path="res://Inside_castle/question_dude_npc/question_dude_ui/x.gd" type="Script" id=6]
+[ext_resource path="res://Inside_castle/question_dude_npc/question_dude_ui/start_question.gd" type="Script" id=7]
+[ext_resource path="res://Inside_castle/walls, map/background_flower.png" type="Texture" id=8]
+[ext_resource path="res://x.png" type="Texture" id=9]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/bar.png" type="Texture" id=10]
+[ext_resource path="res://Inside_castle/question_dude_npc/questions/question_background.png" type="Texture" id=11]
+[ext_resource path="res://pause/pause_menu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://wave/AudioStreamPlayer.gd" type="Script" id=13]
+[ext_resource path="res://normal.wav" type="AudioStream" id=14]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Sprite
+
+
+func _on_x_pressed():
+	get_tree().change_scene(\"res://Inside_castle/walls, map/Map.tscn\")
+"
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends Button
+"
+
+[sub_resource type="DynamicFont" id=4]
+size = 41
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="question_background" type="Sprite"]
+position = Vector2( 522, 297 )
+scale = Vector2( -13.6577, 8.15892 )
+texture = ExtResource( 1 )
+script = SubResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+scale = Vector2( 0.125785, 0.189521 )
+texture = ExtResource( 8 )
+
+[node name="ui" type="Sprite" parent="."]
+position = Vector2( 0.77415, 0.431056 )
+scale = Vector2( 0.0658508, 0.0728722 )
+texture = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="ui"]
+position = Vector2( -3.49329, -440.252 )
+scale = Vector2( 2.50524, -2.08048 )
+texture = ExtResource( 10 )
+
+[node name="start_question_fake" type="Button" parent="ui"]
+visible = false
+margin_left = 18.9822
+margin_top = 11.6437
+margin_right = 180.983
+margin_bottom = 85.6437
+rect_scale = Vector2( -0.212839, 0.187017 )
+custom_fonts/font = SubResource( 3 )
+script = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ui/start_question_fake"]
+position = Vector2( 83.69, 36.5183 )
+scale = Vector2( -3.71781, -6.98222 )
+texture = ExtResource( 5 )
+
+[node name="coins" type="Label" parent="ui"]
+margin_left = -80.9939
+margin_top = -490.311
+margin_right = 73.0063
+margin_bottom = -426.311
+rect_scale = Vector2( -1.1835, 2.16264 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Coins:"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start_question" type="TextureButton" parent="ui"]
+margin_left = 358.644
+margin_top = 25.9259
+margin_right = 404.644
+margin_bottom = 36.9259
+rect_scale = Vector2( -15.4763, 18.1539 )
+texture_normal = ExtResource( 5 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ui/start_question"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 4.88492
+margin_top = 1.68192
+margin_right = 382.885
+margin_bottom = 52.6819
+rect_scale = Vector2( 0.0996207, 0.150194 )
+custom_fonts/font = SubResource( 6 )
+text = "Start questions"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x" type="TextureButton" parent="ui"]
+margin_left = -409.257
+margin_top = -502.826
+margin_right = -334.257
+margin_bottom = -439.826
+rect_scale = Vector2( -1.25955, 1.98153 )
+texture_normal = ExtResource( 9 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="questions" parent="." instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 4.68604, -16.4237 )
+scale = Vector2( -0.0646209, 0.11965 )
+
+[node name="pause" parent="." instance=ExtResource( 12 )]
+visible = false
+margin_left = 37.8541
+margin_top = -35.9116
+margin_right = 77.8541
+margin_bottom = 4.0884
+rect_scale = Vector2( -1.85327, 1.80862 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
+script = ExtResource( 13 )
+
+[connection signal="pressed" from="ui/start_question" to="questions" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="ui/x" to="." method="_on_x_pressed"]
+[connection signal="hide_start_button" from="questions" to="ui/start_question" method="_on_questions_hide_start_button"]
+[connection signal="hide_x" from="questions" to="ui/x" method="_on_questions_hide_x"]
