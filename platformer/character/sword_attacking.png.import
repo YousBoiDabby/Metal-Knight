@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sword_attacking.png-872db02c3bab78959a3718eb570698ff.stex"
+path="res://.import/sword_attacking.png-08e692e15b6df05fb1d69c09e674c9c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level2/platformer/character/sword_attacking.png"
-dest_files=[ "res://.import/sword_attacking.png-872db02c3bab78959a3718eb570698ff.stex" ]
+source_file="res://Metal-Knight-level2waneis/platformer/character/sword_attacking.png"
+dest_files=[ "res://.import/sword_attacking.png-08e692e15b6df05fb1d69c09e674c9c5.stex" ]
 
 [params]
 

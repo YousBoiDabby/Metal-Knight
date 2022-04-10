@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light.png-5c6047086c714869f7b28ece0383ec13.stex"
+path="res://.import/light.png-5f91d64337b9b7b1b153430b43a81f5c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level2/platformer/character/light.png"
-dest_files=[ "res://.import/light.png-5c6047086c714869f7b28ece0383ec13.stex" ]
+source_file="res://Metal-Knight-level2waneis/platformer/character/light.png"
+dest_files=[ "res://.import/light.png-5f91d64337b9b7b1b153430b43a81f5c.stex" ]
 
 [params]
 

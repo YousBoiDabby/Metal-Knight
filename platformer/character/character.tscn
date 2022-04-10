@@ -1,10 +1,10 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://level2/platformer/character.gd" type="Script" id=1]
-[ext_resource path="res://level2/platformer/character/METAL_KINGHT_ANIMATIONS.png" type="Texture" id=2]
-[ext_resource path="res://light.png" type="Texture" id=3]
-[ext_resource path="res://level2/platformer/character/characterdeath.tres" type="Animation" id=4]
-[ext_resource path="res://level2/platformer/character/characterattacking_sword.tres" type="Animation" id=5]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/character.gd" type="Script" id=1]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/character/METAL_KINGHT_ANIMATIONS.png" type="Texture" id=2]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/character/light.png" type="Texture" id=3]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/character/characterdeath.tres" type="Animation" id=4]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/character/characterattacking_sword.tres" type="Animation" id=5]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 68.5, 32.5 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart_empty.png-8bd8438b2825e93a8aff35ec8427900f.stex"
+path="res://.import/heart_empty.png-50a8a01499e07c1a1717a8d35a33022e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level2/platformer/character/heart_empty.png"
-dest_files=[ "res://.import/heart_empty.png-8bd8438b2825e93a8aff35ec8427900f.stex" ]
+source_file="res://Metal-Knight-level2waneis/platformer/character/heart_empty.png"
+dest_files=[ "res://.import/heart_empty.png-50a8a01499e07c1a1717a8d35a33022e.stex" ]
 
 [params]
 

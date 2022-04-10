@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/METAL_KINGHT_ANIMATIONS.png-c9a57a87dae733e9297dfd5a915cc5fc.stex"
+path="res://.import/METAL_KINGHT_ANIMATIONS.png-45c5abb2154d406d53fd504c30bfd117.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level2/platformer/character/METAL_KINGHT_ANIMATIONS.png"
-dest_files=[ "res://.import/METAL_KINGHT_ANIMATIONS.png-c9a57a87dae733e9297dfd5a915cc5fc.stex" ]
+source_file="res://Metal-Knight-level2waneis/platformer/character/METAL_KINGHT_ANIMATIONS.png"
+dest_files=[ "res://.import/METAL_KINGHT_ANIMATIONS.png-45c5abb2154d406d53fd504c30bfd117.stex" ]
 
 [params]
 

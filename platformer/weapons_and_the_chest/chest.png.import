@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chest.png-67d5e95704e108166a82b30bc780aade.stex"
+path="res://.import/chest.png-ee614d8ec14139000d2b506421cab2d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level2/platformer/weapons_and_the_chest/chest.png"
-dest_files=[ "res://.import/chest.png-67d5e95704e108166a82b30bc780aade.stex" ]
+source_file="res://Metal-Knight-level2waneis/platformer/weapons_and_the_chest/chest.png"
+dest_files=[ "res://.import/chest.png-ee614d8ec14139000d2b506421cab2d7.stex" ]
 
 [params]
 

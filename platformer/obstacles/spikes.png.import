@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spikes.png-34cfc133b2323250903d7b3b094f4f97.stex"
+path="res://.import/spikes.png-bea462477606761ef309eab5b47b287b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level2/platformer/obstacles/spikes.png"
-dest_files=[ "res://.import/spikes.png-34cfc133b2323250903d7b3b094f4f97.stex" ]
+source_file="res://Metal-Knight-level2waneis/platformer/obstacles/spikes.png"
+dest_files=[ "res://.import/spikes.png-bea462477606761ef309eab5b47b287b.stex" ]
 
 [params]
 

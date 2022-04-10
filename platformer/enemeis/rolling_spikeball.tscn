@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://level2/platformer/enemeis/rolling_spikeball.gd" type="Script" id=1]
-[ext_resource path="res://level2/platformer/enemeis/rolling_spikeball.png" type="Texture" id=2]
-[ext_resource path="res://light.png" type="Texture" id=3]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/enemeis/rolling_spikeball.gd" type="Script" id=1]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/enemeis/rolling_spikeball.png" type="Texture" id=2]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/character/light.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8.5, 8.5 )
