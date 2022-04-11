@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://game/level2/platformer/mine_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://game/level2/platformer/obstacles/moving_platforms.gd" type="Script" id=2]
+[ext_resource path="res://game/level2/platformer/obstacles/Spikes.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 81, 40 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.375, 41 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 83, 40.5 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 552, 224 )
+script = ExtResource( 2 )
+
+[node name="platofrm" type="TileMap" parent="."]
+position = Vector2( -792, -200 )
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 32 )
+format = 1
+tile_data = PoolIntArray( 655447, -1073741813, 0, 655470, -536870901, 0, 720983, -1073741813, 0, 721006, -536870901, 0 )
+
+[node name="plaform" type="TileMap" parent="."]
+position = Vector2( -792, -200 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 80, 80 )
+format = 1
+tile_data = PoolIntArray( 131081, 6, 0, 131082, 6, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7, 0 )
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -792, -200 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 703.375, 199 )
+shape = SubResource( 2 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( -600, -200 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 703.25, 199 )
+shape = SubResource( 2 )
+
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( -91, -7 )
+rotation = -1.57079
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -91, 9 )
+rotation = -1.57079
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 105, -8 )
+rotation = 1.57079
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 105, 8 )
+rotation = 1.57079
+scale = Vector2( 0.5, 0.5 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2( 7, -0.5 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
