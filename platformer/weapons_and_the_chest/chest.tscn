@@ -1,0 +1,145 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/weapons_and_the_chest/chest.gd" type="Script" id=1]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/weapons_and_the_chest/chest.png" type="Texture" id=2]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/VT323-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/weapons_and_the_chest/text_bubble.png" type="Texture" id=4]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/weapons_and_the_chest/chest_ui.png" type="Texture" id=5]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/weapons_and_the_chest/sword_button.png" type="Texture" id=6]
+[ext_resource path="res://Metal-Knight-level2waneis/platformer/character/light.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 59.5, 45 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "opening"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../chest_ui:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 116.5, 45 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 140
+font_data = ExtResource( 3 )
+
+[node name="chest" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -389.0 ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1, -3 )
+texture = ExtResource( 2 )
+hframes = 5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+position = Vector2( -2.5, -3 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/opening = SubResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 1.39592, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.5, -3 )
+shape = SubResource( 2 )
+
+[node name="text_bubble" type="Sprite" parent="."]
+position = Vector2( 112, -297 )
+scale = Vector2( 7, 7 )
+texture = ExtResource( 4 )
+
+[node name="text_bubble2" type="Sprite" parent="text_bubble"]
+position = Vector2( 0, 8.2 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="text_bubble"]
+margin_left = -54.3
+margin_top = -16.7
+margin_right = 2587.7
+margin_bottom = 294.3
+rect_scale = Vector2( 0.0425607, 0.051255 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "There is a shiny thing in the
+ ground press enter to dig it up"
+
+[node name="chest_ui" type="TextureRect" parent="."]
+margin_left = -157.0
+margin_top = -315.0
+margin_right = 143.0
+margin_bottom = -65.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sword" type="TextureButton" parent="chest_ui"]
+margin_left = 96.0
+margin_top = 134.0
+margin_right = 421.0
+margin_bottom = 459.0
+rect_rotation = 359.999
+rect_scale = Vector2( 0.35, 0.27 )
+texture_normal = ExtResource( 6 )
+expand = true
+
+[node name="mace" type="TextureButton" parent="chest_ui"]
+margin_left = 43.0
+margin_top = 43.0
+margin_right = 133.0
+margin_bottom = 122.0
+
+[node name="Mace" type="Sprite" parent="chest_ui"]
+position = Vector2( 92.875, 63.625 )
+scale = Vector2( 2.03462, 1.92692 )
+
+[node name="spear" type="TextureButton" parent="chest_ui"]
+margin_left = 170.0
+margin_top = 43.0
+margin_right = 257.0
+margin_bottom = 119.0
+
+[node name="Spear" type="Sprite" parent="chest_ui"]
+position = Vector2( 210, 79 )
+scale = Vector2( 2.47083, 2.48 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 0, -83 )
+scale = Vector2( 0.735352, 0.897461 )
+texture = ExtResource( 7 )
+energy = 0.65
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="chest_ui/sword" to="." method="_on_sword_pressed"]
+[connection signal="pressed" from="chest_ui/mace" to="." method="_on_mace_pressed"]
+[connection signal="pressed" from="chest_ui/spear" to="." method="_on_spear_pressed"]
