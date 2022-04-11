@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://game/pixel_font.tres" type="DynamicFont" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="title" type="Label" parent="."]
+margin_left = 40.0
+margin_right = 664.0
+margin_bottom = 65.0
+rect_scale = Vector2( 0.128107, 0.133701 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Rolling Spike ball quest"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title2" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 13.0
+margin_right = 788.0
+margin_bottom = 78.0
+rect_scale = Vector2( 0.102448, 0.101931 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Rolling spikeballs killed: 0/3"
+__meta__ = {
+"_edit_use_anchors_": false
+}

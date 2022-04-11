@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://game/level2/quests/quest_ui.gd" type="Script" id=1]
+[ext_resource path="res://game/level2/dialogue_box.png" type="Texture" id=2]
+[ext_resource path="res://game/pixel_font.tres" type="DynamicFont" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.815686 )
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 3 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.164706, 0, 0, 1 )
+margin_left = 80.0
+margin_top = 8.0
+margin_right = 314.0
+margin_bottom = 73.0
+rect_scale = Vector2( 0.380175, 0.365795 )
+custom_fonts/font = ExtResource( 3 )
+text = "Quest Log"
+__meta__ = {
+"_edit_use_anchors_": false
+}
