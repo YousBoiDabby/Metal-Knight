@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/puzzle_music.wav-4ced664243c1d0f3de9b6bd95a7b419d.sample"
+
+[deps]
+
+source_file="res://game/level2/platformer/puzzle/puzzle_music.wav"
+dest_files=[ "res://.import/puzzle_music.wav-4ced664243c1d0f3de9b6bd95a7b419d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
